@@ -1,0 +1,46 @@
+@mixin icon-padding($padding-type) {
+  &.sm {
+    ui-core-icon {
+      #{$padding-type}: 0.5rem;
+    }
+  }
+  &.md {
+    ui-core-icon {
+      #{$padding-type}: 0.7rem;
+    }
+  }
+  &.lg {
+    ui-core-icon {
+      #{$padding-type}: 0.85rem;
+    }
+  }
+}
+
+.container {
+  display: flex;
+
+  &.left-to-right {
+    flex-direction: row;
+    align-items: center;
+
+    @include icon-padding(padding-right);
+  }
+  &.right-to-left {
+    flex-direction: row-reverse;
+    align-items: center;
+
+    @include icon-padding(padding-left);
+  }
+  &.top-to-bottom {
+    flex-direction: column;
+    align-items: center;
+
+    @include icon-padding(padding-bottom);
+  }
+  &.bottom-to-top {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @include icon-padding(padding-top);
+  }
+}

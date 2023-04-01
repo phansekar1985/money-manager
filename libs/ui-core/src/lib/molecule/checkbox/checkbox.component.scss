@@ -1,0 +1,13 @@
+:host {
+  position: relative;
+
+  ui-core-icon-with-text {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .hidden {
+    position: absolute;
+    display: none;
+  }
+}

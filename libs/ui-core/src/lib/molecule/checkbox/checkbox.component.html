@@ -1,0 +1,17 @@
+<div>
+  <input class="hidden" type="checkbox" [checked]="isChecked" />
+  <ui-core-icon-with-text
+    [iconOption]="{
+      type: 'far',
+      name: isChecked ? 'check-square' : 'square',
+      color: isValid ? 'initial' : 'red'
+    }"
+    [typographyOption]="{
+      type: 'body1',
+      label,
+      color: isValid ? 'initial' : 'red'
+    }"
+    (click)="onClick()"
+  >
+  </ui-core-icon-with-text>
+</div>

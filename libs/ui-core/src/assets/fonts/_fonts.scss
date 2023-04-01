@@ -1,0 +1,8 @@
+$font-families: 'Raleway', 'Raleway-Italic';
+
+@each $font-family in $font-families {
+  @font-face {
+    font-family: $font-family;
+    src: url('./#{$font-family}.ttf') format('opentype');
+  }
+}

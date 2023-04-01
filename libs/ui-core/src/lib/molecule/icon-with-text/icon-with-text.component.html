@@ -1,0 +1,23 @@
+<div
+  class="container"
+  [ngClass]="{
+    'left-to-right': position === 'leftToRight',
+    'right-to-left': position === 'rightToLeft',
+    'top-to-bottom': position === 'topToBottom',
+    'bottom-to-top': position === 'bottomToTop'
+  }"
+  [class]="spaceAround"
+>
+  <ui-core-icon
+    [type]="iconOption.type"
+    [name]="iconOption.name"
+    [color]="iconOption.color || 'initial'"
+  ></ui-core-icon>
+  <ui-core-typography
+    [align]="'left'"
+    [type]="typographyOption.type"
+    [color]="typographyOption.color || 'initial'"
+  >
+    {{ typographyOption.label }}
+  </ui-core-typography>
+</div>

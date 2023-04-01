@@ -1,0 +1,47 @@
+<div
+  [ngSwitch]="type"
+  [ngClass]="'container align-' + align"
+  [ngStyle]="{ color: color }"
+>
+  <h1 *ngSwitchCase="'h1'">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h1>
+  <h2 *ngSwitchCase="'h2'">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h2>
+  <h3 *ngSwitchCase="'h3'">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h3>
+  <h4 *ngSwitchCase="'h4'">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h4>
+  <h5 *ngSwitchCase="'h5'">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h5>
+  <h6 *ngSwitchCase="'h6'">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h6>
+  <h6 *ngSwitchCase="'subtitle1'" class="subtitle1">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h6>
+  <h6 *ngSwitchCase="'subtitle2'" class="subtitle2">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h6>
+  <p *ngSwitchCase="'body1'" class="body1">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </p>
+  <p *ngSwitchCase="'body2'" class="body2">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </p>
+  <p *ngSwitchCase="'button'" class="button">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </p>
+  <p *ngSwitchCase="'caption'" class="caption">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </p>
+  <p *ngSwitchDefault><ui-core-typography>Wrong Type</ui-core-typography></p>
+</div>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>
