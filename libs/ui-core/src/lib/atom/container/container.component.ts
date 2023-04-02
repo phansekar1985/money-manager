@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Size } from '../../type';
 
 @Component({
-  selector: 'money-manager-container',
+  selector: 'ui-core-container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.scss'],
 })
-export class ContainerComponent {}
+export class ContainerComponent {
+  @Input() maxWidth: Size = 'lg';
+}

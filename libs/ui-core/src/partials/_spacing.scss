@@ -1,0 +1,5 @@
+$spacing-multiple: 4;
+
+@function spacing($number, $unit: 'px') {
+  @return #{$number * $spacing-multiple}#{$unit};
+}

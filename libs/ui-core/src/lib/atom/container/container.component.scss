@@ -1,0 +1,21 @@
+@import '../../../partials/size';
+@import '../../../partials/spacing';
+
+@mixin fluidWidth($size, $width) {
+  &.fluid-width-#{$size} {
+    @media screen and (min-width: #{$width}) {
+      max-width: #{$width};
+      margin: 0 auto;
+    }
+  }
+}
+
+.container {
+  margin: 0 spacing(5);
+
+  &__content {
+    @each $size, $value in $sizes {
+      @include fluidWidth($size, #{$value}px);
+    }
+  }
+}
