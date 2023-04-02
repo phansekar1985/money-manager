@@ -72,5 +72,9 @@
         "plugin:@ngrx/recommended"
       ]
     }
+  ],
+  "extends": [
+    null,
+    "plugin:storybook/recommended"
   ]
 }

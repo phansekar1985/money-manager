@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+// Components
 import { AppComponent } from './app.component';
 
+// Internal Module
 import { AppRouterModule } from '../app-router/app-router.module';
-
-import { UiCoreModule } from '@money-manager/ui-core';
-import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, UiCoreModule, AppRouterModule, StoreModule.forRoot({}, {})],
+  imports: [
+    BrowserModule,
+    AppRouterModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({ maxAge: 50 }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
