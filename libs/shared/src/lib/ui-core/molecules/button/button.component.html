@@ -1,0 +1,24 @@
+<button
+  [disabled]="isDisabled"
+  [ngClass]="['variant-' + variant, 'size-' + size]"
+  (click)="onClick()"
+>
+  <ng-container [ngSwitch]="type">
+    <ui-core-typography *ngSwitchCase="'textOnly'" type="button">{{
+      label
+    }}</ui-core-typography>
+    <ui-core-icon
+      *ngSwitchCase="'iconOnly'"
+      [type]="icon!.type"
+      [name]="icon!.name"
+    ></ui-core-icon>
+    <ui-core-icon-with-text
+      *ngSwitchCase="'iconWithText'"
+      [iconOption]="iconWithText!.iconOption"
+      [typographyOption]="iconWithText!.typographyOption"
+    ></ui-core-icon-with-text>
+    <ui-core-typography *ngSwitchDefault type="button"
+      >Wrong type</ui-core-typography
+    >
+  </ng-container>
+</button>

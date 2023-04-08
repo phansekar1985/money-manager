@@ -1,0 +1,103 @@
+@import './fonts/fonts';
+
+* {
+  margin: 0;
+}
+
+.container {
+  font-family: $font-families, 'Helvetica', 'Arial', sans-serif;
+  letter-spacing: 0.05rem;
+  margin: 0;
+
+  h1,
+  h2 {
+    font-weight: 300;
+  }
+
+  h3,
+  h4,
+  h5,
+  .subtitle {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 6rem;
+    line-height: 1.167;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 3rem;
+    line-height: 1.167;
+  }
+
+  h4 {
+    font-size: 2.125rem;
+    line-height: 1.235;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1.334;
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.6;
+
+    &.subtitle1 {
+      font-size: 1rem;
+      line-height: 1.75;
+      letter-spacing: 0.1rem;
+    }
+
+    &.subtitle2 {
+      font-size: 0.875rem;
+      line-height: 1.57;
+    }
+  }
+
+  p {
+    &.body1 {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    &.button {
+      text-transform: uppercase;
+    }
+  }
+
+  &.gutter-bottom {
+    margin-bottom: 2.5rem;
+  }
+
+  &.align {
+    &-center {
+      text-align: center;
+    }
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+
+    &-inherit {
+      text-align: inherit;
+    }
+
+    &-justify {
+      text-align: justify;
+    }
+  }
+}

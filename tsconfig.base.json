@@ -15,8 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@money-manager/pages/pre-login": ["libs/pages/pre-login/src/index.ts"],
-      "@money-manager/ui-core": ["libs/ui-core/src/index.ts"]
+      "@money-manager/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
