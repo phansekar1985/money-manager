@@ -44,8 +44,6 @@ export class ButtonComponent implements ButtonComponentType, AfterViewInit {
       : this.icon
       ? 'iconOnly'
       : 'iconWithText';
-
-    console.log(this.type);
   }
 
   onClick() {

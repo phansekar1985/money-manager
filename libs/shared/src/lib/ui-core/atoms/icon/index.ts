@@ -1,1 +1,2 @@
-export { IconComponent, IconComponentType } from './icon.component';
+export { IconComponent } from './icon.component';
+export * from './type';

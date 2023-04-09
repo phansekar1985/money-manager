@@ -3,27 +3,7 @@ import { Property } from 'csstype';
 import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 import { TypographyTypes } from '../../atoms/typography/typography.component';
 import { Position, Size } from '../../type';
-
-interface Option {
-  color?: Property.Color;
-}
-
-interface TypographyOption extends Option {
-  type: TypographyTypes;
-  label: string;
-}
-
-interface IconOption extends Option {
-  type: IconPrefix;
-  name: IconName;
-}
-
-export interface IconWithTextComponentType {
-  typographyOption: TypographyOption;
-  iconOption: IconOption;
-  position?: Position;
-  spaceAround?: Size;
-}
+import { IconWithTextComponentType } from './type';
 
 @Component({
   selector: 'ui-core-icon-with-text',

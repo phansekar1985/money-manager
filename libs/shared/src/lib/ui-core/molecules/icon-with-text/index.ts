@@ -1,4 +1,2 @@
-export {
-  IconWithTextComponent,
-  IconWithTextComponentType,
-} from './icon-with-text.component';
+export * from './icon-with-text.component';
+export * from './type';

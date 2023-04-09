@@ -1,24 +1,31 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { Size } from '../../type';
 import { ContainerComponent } from './container.component';
+import { TypographyComponent } from '../typography/typography.component';
 
 const sizes: Size[] = ['xs', 'sm', 'md', 'lg', 'xl'];
 
 export default {
   title: 'Atom/Container',
   component: ContainerComponent,
+  decorators: [
+    moduleMetadata({
+      declarations: [TypographyComponent],
+    }),
+  ],
   render: (props: ContainerComponent) => {
     return {
       props,
       template: `
         <ui-core-container [maxWidth]="maxWidth">
-          <div>Hello world</div>
+          <ui-core-typography><p>Hello world</p></ui-core-typography>
         </ui-core-container>
       `,
       styles: [
         `
-          .container {
+          p {
             border: 1px solid red;
+            padding: 5px;
           }
         `,
       ],

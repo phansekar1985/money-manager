@@ -6,14 +6,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { Size } from '../../type';
-
-export interface IconComponentType {
-  type: IconPrefix;
-  name: IconName;
-  size?: Size;
-  isAnimate?: boolean;
-  color?: Property.Color;
-}
+import { IconComponentType } from './type';
 
 @Component({
   selector: 'ui-core-icon',

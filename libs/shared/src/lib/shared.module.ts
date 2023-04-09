@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// external modules
+// External Modules
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-// services
-import { PdfService } from './services';
-
-// components
+// Components
 import {
   ContainerComponent,
   IconComponent,
-  StackComponent,
   TypographyComponent,
+  GridComponent,
 } from './ui-core/atoms';
 import {
   ButtonComponent,
@@ -20,16 +17,19 @@ import {
   IconWithTextComponent,
 } from './ui-core/molecules';
 
+// Services
+import { PdfService } from './services';
+
 @NgModule({
   imports: [CommonModule, FontAwesomeModule],
   declarations: [
     ContainerComponent,
     IconComponent,
-    StackComponent,
     TypographyComponent,
     ButtonComponent,
     CheckboxComponent,
     IconWithTextComponent,
+    GridComponent,
   ],
   providers: [PdfService],
 })

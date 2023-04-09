@@ -1,0 +1,33 @@
+@import '../../partials/size';
+
+$columns: 12;
+
+@mixin setFlexBasis($screen) {
+  &.#{$screen} {
+    flex-basis: auto;
+  }
+
+  @for $column from 1 through $columns {
+    &.#{$screen}-#{$column} {
+      flex-basis: calc((#{$column}/ #{$columns}) * 100%);
+    }
+  }
+}
+
+:host {
+  &.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.item {
+    flex: 1;
+    box-sizing: border-box;
+
+    @each $screen, $size in $screen-sizes {
+      @media screen and (min-width: #{$size}px) {
+        @include setFlexBasis($screen);
+      }
+    }
+  }
+}

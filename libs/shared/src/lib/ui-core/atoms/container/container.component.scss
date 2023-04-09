@@ -14,8 +14,8 @@
   margin: 0 spacing(5);
 
   &__content {
-    @each $size, $value in $sizes {
-      @include fluidWidth($size, #{$value}px);
+    @each $screen, $screen-value in $screen-sizes {
+      @include fluidWidth($screen, #{$screen-value}px);
     }
   }
 }
